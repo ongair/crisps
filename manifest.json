@@ -20,7 +20,8 @@
   },
   "permissions": [
     "activeTab",
-    "https://app.crisp.im/*",
+    "https://ajax.googleapis.com/",
+    "webNavigation",
     "storage"
   ],
   "background": {
