@@ -26,7 +26,7 @@ function getEmail() {
 window.addEventListener ("load", checkEmail, false);
 
 function checkEmail (evt) {
-    var jsInitChecktimer = setInterval (checkForJS_Finish, 1500);
+    var jsInitChecktimer = setInterval (checkForJS_Finish, 15000);
 
     function checkForJS_Finish () {
         if (document.querySelector (".cdc-inbox-userinfo-box-inner-email  > :first-child") != null) {
