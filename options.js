@@ -6,10 +6,12 @@ function save_options() {
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
-    status.textContent = 'URL saved.';
+    status.className += " alert alert-success";
+    status.textContent = 'URL successfully saved.';
     setTimeout(function() {
+      status.className = ""
       status.textContent = '';
-    }, 750);
+    }, 2000);
   });
 }
 
