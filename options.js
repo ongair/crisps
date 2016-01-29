@@ -15,13 +15,10 @@ function save_options() {
   });
 }
 
-// Restores select box and checkbox state using the preferences
-// stored in chrome.storage.
+// Restores URL field using the preferences stored in chrome.storage.
 function restore_options() {
   // Use default value color = 'red' and likesColor = true.
-  chrome.storage.sync.get({
-    endpointURL: 'Your endpoint URL here'
-  }, function(items) {
+  chrome.storage.sync.get('endpointURL', function(items) {
     document.getElementById('endpointURL').value = items.endpointURL;
   });
 }
