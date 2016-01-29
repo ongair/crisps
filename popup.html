@@ -7,19 +7,7 @@
 <html>
   <head>
     <title>Getting Started Extension's Popup</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-      }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!--
       - JavaScript and HTML must be in separate files: see our Content Security
@@ -27,11 +15,28 @@
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
+
+     <style>
+       body {
+         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+         font-size: 100%;
+         /*min-width: 400px;*/
+       }
+       #status {
+         /* avoid an excessively wide status text */
+         white-space: pre;
+         text-overflow: ellipsis;
+         overflow: hidden;
+         max-width: 400px;
+       }
+     </style>
     <script src="email.js"></script>
 
   </head>
   <body>
-    
+    <div class="container">
+      <!-- <p>To set the URL, click <a href="/options.html">here</a></p> -->
+    </div>
   </body>
 </html>
 
