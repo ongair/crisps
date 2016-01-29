@@ -1,2 +1,2 @@
 # Lookup for Crisp
-Crisp is a great minimalist live chat platform
+[Crisp](https://crisp.im) is a great minimalist live chat platform.
