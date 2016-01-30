@@ -15,7 +15,6 @@ function getEmail() {
 			  url: url + "?email=" + email,
 			  dataType: 'json',
 			  success: function(data, textStatus, jqXhr) {
-			  	// showIfEmailIsRegistered(document.querySelector (".cdc-inbox-userinfo-box-inner-email  > :first-child"), data)
 			  	if (data.exists) {
 			  		emailDiv.innerHTML = email + " | <span style='color: green;'>YES</span>"
 			  	} else{
