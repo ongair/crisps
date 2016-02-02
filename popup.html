@@ -1,42 +1,33 @@
-<!doctype html>
-<!--
- This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
- -->
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
+    <title>Settings</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-
-     <style>
-       body {
-         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-         font-size: 100%;
-         /*min-width: 400px;*/
-       }
-       #status {
-         /* avoid an excessively wide status text */
-         white-space: pre;
-         text-overflow: ellipsis;
-         overflow: hidden;
-         max-width: 400px;
-       }
-     </style>
-    <script src="email.js"></script>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
     <div class="container">
-      <!-- <p>To set the URL, click <a href="/options.html">here</a></p> -->
+      <div id="status"></div>
+      <div class="alert alert-success" role="alert">
+      <strong><i class="fa fa-lightbulb-o"></i> Tips:</strong>
+      <ul>
+        <li>Method: <strong>GET</li></strong>
+        <li>Format: <strong>http(s)://yourapi.com/path (We will append the email in the URL as a query param i.e. ?email=user@example.com)</li></strong>
+        <li>Response format: <strong><code>{ exists: true }</code> OR <code>{ exists: false }</code></li></strong>
+      </ul>
+      </div>
+      <h3>Settings</h3>
+      <p>Set the URL we can use to check if an email is registered with your service</p>
+      <div class="form-group">
+        <label>
+          URL
+        </label>
+        <input type="text" class="form-control" id="endpointURL" placeholder="http://yourapi.com/path" >
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" id="save">Save</button>
+      </div>
     </div>
+    <script src="options.js"></script>
   </body>
 </html>
-
